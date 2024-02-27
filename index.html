@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+        <style>
+            .image-grid {
+              display: grid;
+              grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+              gap: 10px;
+            }
+            .image-item {
+              position: relative;
+              overflow: hidden;
+            }
+            .image-item img {
+              width: 100%;
+              height: auto;
+              display: block;
+              transition: transform 0.3s ease;
+            }
+            .image-item:hover img {
+              transform: scale(1.1);
+            }
+            .overlay {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              opacity: 0;
+              background-color: rgba(0, 0, 0, 0.5);
+              color: white;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              transition: opacity 0.3s ease;
+            }
+            .image-item:hover .overlay {
+              opacity: 1;
+            }
+            .modal {
+              display: none;
+              position: fixed;
+              z-index: 999;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0,0,0,0.9);
+              overflow: auto;
+              padding-top: 50px;
+            }
+            .modal-content {
+              margin: 1vw auto;
+              display: block;
+              max-width: 80%;
+              max-height: 80%;
+            }
+            .close {
+              position: absolute;
+              top: 70px;
+              right: 35px;
+              color: #fff;
+              font-size: 40px;
+              font-weight: bold;
+              transition: 0.3s;
+            }
+            .close:hover,
+            .close:focus {
+              color: #bbb;
+              text-decoration: none;
+              cursor: pointer;
+            }
+            .description {
+              color: #fff;
+              text-align: center;
+              margin-top: 20px;
+            }
+          </style>
+</head>
+
+<body>
+    <header>
+        <img src="Images/Logo-03.png" alt="Logo"> <!-- Replace "your-logo.png" with your logo path -->
+        <div class="buttons">
+            <a href="#">About</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+        </div>
+    </header>
+      
+    <main>
+
+        <div class="image-container">
+
+            <img class="rightpicture" src="Images/right picture.png" alt="right picture">
+
+            <img src="Images/Line4.png" alt="Line4" style="width:100%;">
+            <img src="Images/Line3.png" alt="Line3" style="width:100%;">
+            <img src="Images/Line2.png" alt="Line2" style="width:100%;">
+            <img src="Images/Line1.png" alt="Line1" style="width:100%;">
+            <img src="Images/Line5.png" alt="Line5" style="width:100%;padding: 33vw 0vw 47vw 0vw;">
+
+            <div class="Christian">Christian Pardo</div>
+            <div class="Exhibition">3D Exhibition & <br>Graphic Designer</div>
+            <div class="locate">Locate in <br> ON, Canada</div>
+            <div class="supporting">Supporting brands to excel <br> in the digital environment. </div>
+            <div class="paragraph1">Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.
+                Maecenas amet quis magna sociis. Nibh quis lorem duis tempus sed enim eget dictum velLorem ipsum dolor
+                sit amet consectetur. Maecenas amet quis magna sociis. Nibh quis lorem duis tempus sed enim eget dictum
+                velLorem ipsum dolor sit amet consectetur. Maecenas amet quis magna sociis. Nibh quis lorem duis tempus
+                sed enim eget dictum velLorem ipsum dolor sit amet consectetur. Maecenas amet quis magna sociis. Nibh
+                quis lorem duis tempus sed enim eget dictum velLorem ipsum dolor sit amet consectetur. Maecenas amet
+                quis magna sociis. Nibh quis lorem duis tempus sed enim eget dictum velLorem ipsum dolor sit amet
+                consectetur. Maecenas amet quis magna sociis. Nibh quis lorem duis tempus sed enim eget dictum velLorem
+                ipsum dolor sit amet consectetur. Maecenas amet quis magna sociis. Nibh quis lorem duis tempus sed enim
+                eget dictum velMaecenas amet quis magna sociis. Nibh quis lorem duis tempus sed enim eget dictum vel
+
+
+                <img class="circle" src="Images/Gradient ring.png" alt="Example Image">
+
+                <div class="row">
+                    <div class="column">
+                        <h2>3D background</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.
+                            Maecenas amet quis magna sociis. Nibh quis lorem duis tempus sed enim eget dictum velLorem
+                            ipsum dolor
+                            sit amet consectetur. Maecenas amet quis magna sociis.</p>
+                    </div>
+                    <div class="column">
+                        <h2>2D environment</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.
+                            Maecenas amet quis magna sociis. Nibh quis lorem duis tempus sed enim eget dictum velLorem
+                            ipsum dolor
+                            sit amet consectetur. Maecenas amet quis magna sociis.</p>
+                    </div>
+                    <div class="column">
+                        <h2>Column 3</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.
+                            Maecenas amet quis magna sociis. Nibh quis lorem duis tempus sed enim eget dictum velLorem
+                            ipsum dolor
+                            sit amet consectetur. Maecenas amet quis magna sociis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <img class="circle" src="Images/Gradient ring.png" alt="Example Image">
+
+        <div class="tresd">3D recent work </div>
+
+        <div class="image-grid">
+            <div class="image-item small" onclick="openModal('Images/Empaques 0002.jpg', 'Description for Image 1')">
+              <img src="Images/Empaques 0002.jpg" alt="Image 1">
+              <div class="overlay">
+                <p>Description for Image 1</p>
+              </div>
+            </div>
+            <div class="image-item medium" onclick="openModal('Images/Empaques 0003.jpg', 'Description for Image 2')">
+              <img src="Images/Empaques 0003.jpg" alt="Image 2">
+              <div class="overlay">
+                <p>Description for Image 2</p>
+              </div>
+            </div>
+            <div class="image-item large" onclick="openModal('Images/Empaques 0004.jpg', 'Description for Image 3')">
+              <img src="Images/Empaques 0004.jpg" alt="Image 3">
+              <div class="overlay">
+                <p>Description for Image 3</p>
+              </div>
+            </div>
+            <div class="image-item large" onclick="openModal('Images/Empaques 0002.jpg', 'Description for Image 3')">
+                <img src="Images/Empaques 0002.jpg" alt="Image 3">
+                <div class="overlay">
+                  <p>Description for Image 3</p>
+                </div>
+              </div>
+              <div class="image-item large" onclick="openModal('Images/Empaques 0003.jpg', 'Description for Image 3')">
+                <img src="Images/Empaques 0003.jpg" alt="Image 3">
+                <div class="overlay">
+                  <p>Description for Image 3</p>
+                </div>
+              </div>
+              <div class="image-item large" onclick="openModal('Images/Empaques 0003.jpg', 'Description for Image 3')">
+                <img src="Images/Empaques 0003.jpg" alt="Image 3">
+                <div class="overlay">
+                  <p>Description for Image 3</p>
+                </div>
+              </div>
+              <div class="image-item large" onclick="openModal('Images/Empaques 0003.jpg', 'Description for Image 3')">
+                <img src="Images/Empaques 0003.jpg" alt="Image 3">
+                <div class="overlay">
+                  <p>Description for Image 3</p>
+                </div>
+              </div>
+              
+              
+              
+            <!-- Add more image items as needed -->
+          </div>
+          
+          <div id="modal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modal-image">
+            <div id="caption" class="description"></div>
+          </div>
+          
+          <script>
+          function openModal(imageSrc, description) {
+            document.getElementById('modal-image').src = imageSrc;
+            document.getElementById('caption').innerHTML = description;
+            document.getElementById('modal').style.display = 'block';
+          }
+          
+          function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+          }
+          </script> 
+        
+        <div class="dosd">2D recent work </div>
+
+        <div class="image-grid">
+            <div class="image-item small" onclick="openModal('Images/Empaques 0002.jpg', 'Description for Image 1')">
+              <img src="Images/Empaques 0002.jpg" alt="Image 1">
+              <div class="overlay">
+                <p>Description for Image 1</p>
+              </div>
+            </div>
+            <div class="image-item medium" onclick="openModal('Images/Empaques 0003.jpg', 'Description for Image 2')">
+              <img src="Images/Empaques 0003.jpg" alt="Image 2">
+              <div class="overlay">
+                <p>Description for Image 2</p>
+              </div>
+            </div>
+            <div class="image-item large" onclick="openModal('Images/Empaques 0004.jpg', 'Description for Image 3')">
+              <img src="Images/Empaques 0004.jpg" alt="Image 3">
+              <div class="overlay">
+                <p>Description for Image 3</p>
+              </div>
+            </div>
+            <div class="image-item large" onclick="openModal('Images/Empaques 0002.jpg', 'Description for Image 3')">
+                <img src="Images/Empaques 0002.jpg" alt="Image 3">
+                <div class="overlay">
+                  <p>Description for Image 3</p>
+                </div>
+              </div>
+              <div class="image-item large" onclick="openModal('Images/Empaques 0003.jpg', 'Description for Image 3')">
+                <img src="Images/Empaques 0003.jpg" alt="Image 3">
+                <div class="overlay">
+                  <p>Description for Image 3</p>
+                </div>
+              </div>
+              <div class="image-item large" onclick="openModal('Images/Empaques 0003.jpg', 'Description for Image 3')">
+                <img src="Images/Empaques 0003.jpg" alt="Image 3">
+                <div class="overlay">
+                  <p>Description for Image 3</p>
+                </div>
+              </div>
+              <div class="image-item large" onclick="openModal('Images/Empaques 0003.jpg', 'Description for Image 3')">
+                <img src="Images/Empaques 0003.jpg" alt="Image 3">
+                <div class="overlay">
+                  <p>Description for Image 3</p>
+                </div>
+              </div>
+            <!-- Add more image items as needed -->
+          </div>
+          
+          <div id="modal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modal-image">
+            <div id="caption" class="description"></div>
+          </div>
+          
+          <script>
+          function openModal(imageSrc, description) {
+            document.getElementById('modal-image').src = imageSrc;
+            document.getElementById('caption').innerHTML = description;
+            document.getElementById('modal').style.display = 'block';
+          }
+          
+          function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+          }
+          </script> 
+
+        <div class="lets">Let's get creative</div>
+
+        <img class="chrisring" src="Images/chrisring-01-01.png" alt="chrisring">
+
+        <img class="logo" src="Images/Logo-03.png" alt="logo">
+        <hr class="custom-hr">
+        <div class="getintouch">
+            <span class="text">Get in Touch</span>
+        </div>
+
+        <div class="cel">+1 905 931 7638</div>
+        <div class="email">christianpardo.design@outlook.com</div>
+        <div class="insta">@christianpardo.design</div>
+
+    </main>
+
+    
+</body>
+
+</html>
