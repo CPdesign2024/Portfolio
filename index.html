@@ -17,79 +17,7 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
         <style>
-            .image-grid {
-              display: grid;
-              grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-              gap: 10px;
-            }
-            .image-item {
-              position: relative;
-              overflow: hidden;
-            }
-            .image-item img {
-              width: 100%;
-              height: auto;
-              display: block;
-              transition: transform 0.3s ease;
-            }
-            .image-item:hover img {
-              transform: scale(1.1);
-            }
-            .overlay {
-              position: absolute;
-              top: 0;
-              left: 0;
-              width: 100%;
-              height: 100%;
-              opacity: 0;
-              background-color: rgba(0, 0, 0, 0.5);
-              color: white;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              transition: opacity 0.3s ease;
-            }
-            .image-item:hover .overlay {
-              opacity: 1;
-            }
-            .modal {
-              display: none;
-              position: fixed;
-              z-index: 999;
-              left: 0;
-              top: 0;
-              width: 100%;
-              height: 100%;
-              background-color: rgba(0,0,0,0.9);
-              overflow: auto;
-              padding-top: 50px;
-            }
-            .modal-content {
-              margin: 1vw auto;
-              display: block;
-              max-width: 80%;
-              max-height: 80%;
-            }
-            .close {
-              position: absolute;
-              top: 70px;
-              right: 35px;
-              color: #fff;
-              font-size: 40px;
-              font-weight: bold;
-              transition: 0.3s;
-            }
-            .close:hover,
-            .close:focus {
-              color: #bbb;
-              text-decoration: none;
-              cursor: pointer;
-            }
-            .description {
-              color: #fff;
-              text-align: center;
-              margin-top: 20px;
-            }
+           
           </style>
 </head>
 
@@ -97,9 +25,9 @@
     <header>
         <img src="Images/Logo-03.png" alt="Logo"> <!-- Replace "your-logo.png" with your logo path -->
         <div class="buttons">
-            <a href="#">About</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Contact</a>
+            <a href="#supporting">About</a>
+            <a href="#tresd">Portfolio</a>
+            <a href="#email">Contact</a>
         </div>
     </header>
       
@@ -113,12 +41,12 @@
             <img src="Images/Line3.png" alt="Line3" style="width:100%;">
             <img src="Images/Line2.png" alt="Line2" style="width:100%;">
             <img src="Images/Line1.png" alt="Line1" style="width:100%;">
-            <img src="Images/Line5.png" alt="Line5" style="width:100%;padding: 33vw 0vw 47vw 0vw;">
+            <img src="Images/Line5.png" alt="Line5" style="width:100%;padding: 33vw 0vw 35vw 0vw;">
 
             <div class="Christian">Christian Pardo</div>
             <div class="Exhibition">3D Exhibition & <br>Graphic Designer</div>
-            <div class="locate">Locate in <br> ON, Canada</div>
-            <div class="supporting">Supporting brands to excel <br> in the digital environment. </div>
+            <div class="locate">Located in <br> ON, Canada</div>
+            <div id="supporting">Supporting brands to excel <br> in the digital environment. </div>
             <div class="paragraph1">Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet consectetur.
                 Maecenas amet quis magna sociis. Nibh quis lorem duis tempus sed enim eget dictum velLorem ipsum dolor
                 sit amet consectetur. Maecenas amet quis magna sociis. Nibh quis lorem duis tempus sed enim eget dictum
@@ -161,11 +89,108 @@
 
         <img class="circle" src="Images/Gradient ring.png" alt="Example Image">
 
-        <div class="tresd">3D recent work </div>
+        <div id="tresd">3D recent work </div>
 
         <div class="image-grid">
-            <div class="image-item small" onclick="openModal('Images/Empaques 0002.jpg', 'Description for Image 1')">
-              <img src="Images/Empaques 0002.jpg" alt="Image 1">
+            <div class="image-item small" onclick="openModal('Images/Carro 0001.jpg', 'Description for Image 1')">
+              <img src="Images/Carro 0001.jpg" alt="Image 1">
+              <div class="overlay">
+                <p>Description for Image 1</p>
+              </div>
+            </div>
+            <div class="image-item medium" onclick="openModal('Images/Glenfiddich FrontView.jpg', 'Description for Image 2')">
+              <img src="Images/Glenfiddich FrontView.jpg" alt="Image 2">
+              <div class="overlay">
+                <p>Description for Image 2</p>
+              </div>
+            </div>
+            <div class="image-item large" onclick="openModal('Images/Glorificador 0000.jpg', 'Description for Image 3')">
+              <img src="Images/Glorificador 0000.jpg" alt="Image 3">
+              <div class="overlay">
+                <p>Description for Image 3</p>
+              </div>
+            </div>
+            <div class="image-item large" onclick="openModal('Images/Glorificador 0001.jpg', 'Description for Image 3')">
+                <img src="Images//Glorificador 0001.jpg" alt="Image 3">
+                <div class="overlay">
+                  <p>Description for Image 3</p>
+                </div>
+              </div>
+              <div class="image-item large" onclick="openModal('Images/Glorificador 0002.jpg', 'Description for Image 3')">
+                <img src="Images/Glorificador 0002.jpg" alt="Image 3">
+                <div class="overlay">
+                  <p>Description for Image 3</p>
+                </div>
+              </div>
+              <div class="image-item large" onclick="openModal('Images/Glorificador 0003.jpg', 'Description for Image 3')">
+                <img src="Images/Glorificador 0003.jpg" alt="Image 3">
+                <div class="overlay">
+                  <p>Description for Image 3</p>
+                </div>
+              </div>
+              <div class="image-item large" onclick="openModal('Images/Grants frontView.jpg', 'Description for Image 3')">
+                <img src="Images/Grants frontView.jpg" alt="Image 3">
+                <div class="overlay">
+                  <p>Description for Image 3</p>
+                </div>
+              </div>
+              <div class="image-item small" onclick="openModal('Images/Centro de lactancia 0000.jpg', 'Description for Image 1')">
+                <img src="Images/Centro de lactancia 0000.jpg" alt="Image 1">
+                <div class="overlay">
+                  <p>Description for Image 1</p>
+                </div>
+              </div>
+              <div class="image-item medium" onclick="openModal('Images/Evento 0001.jpg', 'Description for Image 2')">
+                <img src="Images/Evento 0001.jpg" alt="Image 2">
+                <div class="overlay">
+                  <p>Description for Image 2</p>
+                </div>
+              </div>
+              <div class="image-item large" onclick="openModal('Images/Externas_00002.jpg', 'Description for Image 3')">
+                <img src="Images/Externas_00002.jpg" alt="Image 3">
+                <div class="overlay">
+                  <p>Description for Image 3</p>
+                </div>
+              </div>
+              <div class="image-item large" onclick="openModal('Images/Image List 4.jpg', 'Description for Image 3')">
+                  <img src="Images/Image List 4.jpg" alt="Image 3">
+                  <div class="overlay">
+                    <p>Description for Image 3</p>
+                  </div>
+                </div>
+                <div class="image-item large" onclick="openModal('Images/Pabellon 0000.jpg', 'Description for Image 3')">
+                  <img src="Images/Pabellon 0000.jpg" alt="Image 3">
+                  <div class="overlay">
+                    <p>Description for Image 3</p>
+                  </div>
+                </div>
+                                           
+            <!-- Add more image items as needed -->
+          </div>
+          
+          <div id="modal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modal-image">
+            <div id="caption" class="description"></div>
+          </div>
+          
+          <script>
+          function openModal(imageSrc, description) {
+            document.getElementById('modal-image').src = imageSrc;
+            document.getElementById('caption').innerHTML = description;
+            document.getElementById('modal').style.display = 'block';
+          }
+          
+          function closeModal() {
+            document.getElementById('modal').style.display = 'none';
+          }
+          </script> 
+        
+    <div class="dosd">2D recent work </div>
+
+        <div class="image-grid">
+            <div class="image-item small" onclick="openModal('Images/Untitled-1-01-01.jpg', 'Description for Image 1')">
+              <img src="Images/Untitled-1-01-01.jpg" alt="Image 1">
               <div class="overlay">
                 <p>Description for Image 1</p>
               </div>
@@ -206,8 +231,18 @@
                   <p>Description for Image 3</p>
                 </div>
               </div>
-              
-              
+              <div class="image-item large" onclick="openModal('Images/Empaques 0003.jpg', 'Description for Image 3')">
+                <img src="Images/Empaques 0003.jpg" alt="Image 3">
+                <div class="overlay">
+                  <p>Description for Image 3</p>
+                </div>
+              </div>
+              <div class="image-item large" onclick="openModal('Images/Empaques 0003.jpg', 'Description for Image 3')">
+                <img src="Images/Empaques 0003.jpg" alt="Image 3">
+                <div class="overlay">
+                  <p>Description for Image 3</p>
+                </div>
+
               
             <!-- Add more image items as needed -->
           </div>
@@ -230,71 +265,9 @@
           }
           </script> 
         
-        <div class="dosd">2D recent work </div>
+       
 
-        <div class="image-grid">
-            <div class="image-item small" onclick="openModal('Images/Empaques 0002.jpg', 'Description for Image 1')">
-              <img src="Images/Empaques 0002.jpg" alt="Image 1">
-              <div class="overlay">
-                <p>Description for Image 1</p>
-              </div>
-            </div>
-            <div class="image-item medium" onclick="openModal('Images/Empaques 0003.jpg', 'Description for Image 2')">
-              <img src="Images/Empaques 0003.jpg" alt="Image 2">
-              <div class="overlay">
-                <p>Description for Image 2</p>
-              </div>
-            </div>
-            <div class="image-item large" onclick="openModal('Images/Empaques 0004.jpg', 'Description for Image 3')">
-              <img src="Images/Empaques 0004.jpg" alt="Image 3">
-              <div class="overlay">
-                <p>Description for Image 3</p>
-              </div>
-            </div>
-            <div class="image-item large" onclick="openModal('Images/Empaques 0002.jpg', 'Description for Image 3')">
-                <img src="Images/Empaques 0002.jpg" alt="Image 3">
-                <div class="overlay">
-                  <p>Description for Image 3</p>
-                </div>
-              </div>
-              <div class="image-item large" onclick="openModal('Images/Empaques 0003.jpg', 'Description for Image 3')">
-                <img src="Images/Empaques 0003.jpg" alt="Image 3">
-                <div class="overlay">
-                  <p>Description for Image 3</p>
-                </div>
-              </div>
-              <div class="image-item large" onclick="openModal('Images/Empaques 0003.jpg', 'Description for Image 3')">
-                <img src="Images/Empaques 0003.jpg" alt="Image 3">
-                <div class="overlay">
-                  <p>Description for Image 3</p>
-                </div>
-              </div>
-              <div class="image-item large" onclick="openModal('Images/Empaques 0003.jpg', 'Description for Image 3')">
-                <img src="Images/Empaques 0003.jpg" alt="Image 3">
-                <div class="overlay">
-                  <p>Description for Image 3</p>
-                </div>
-              </div>
-            <!-- Add more image items as needed -->
-          </div>
-          
-          <div id="modal" class="modal">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img class="modal-content" id="modal-image">
-            <div id="caption" class="description"></div>
-          </div>
-          
-          <script>
-          function openModal(imageSrc, description) {
-            document.getElementById('modal-image').src = imageSrc;
-            document.getElementById('caption').innerHTML = description;
-            document.getElementById('modal').style.display = 'block';
-          }
-          
-          function closeModal() {
-            document.getElementById('modal').style.display = 'none';
-          }
-          </script> 
+        <div class="morework">MORE WORK</div>
 
         <div class="lets">Let's get creative</div>
 
@@ -305,9 +278,9 @@
         <div class="getintouch">
             <span class="text">Get in Touch</span>
         </div>
-
+        
         <div class="cel">+1 905 931 7638</div>
-        <div class="email">christianpardo.design@outlook.com</div>
+        <div id="email">christianpardo.design@outlook.com</div>
         <div class="insta">@christianpardo.design</div>
 
     </main>
