@@ -206,15 +206,7 @@
 
   }
 
-  .image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    grid-gap: 10px;
-    padding: 2vw 10vw 0vw 10vw;
-    
-  }
-
-  .dosd {
+   .dosd {
     color: black;
     font-size: calc(clamp(1em, 1vw, 8em) * .875);
     font-family: "roboto", sans-serif;
@@ -343,6 +335,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 10px;
+    padding: 2vw 10vw 0vw 10vw;
   }
   .image-item {
     position: relative;
